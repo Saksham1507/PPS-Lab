@@ -1,0 +1,16 @@
+def fibonacci_series(x):
+	series = []
+	a,b = 0,1
+	for _ in range(x):
+		series.append(a)
+		a,b = b,a+b
+	return series
+
+n = int(input("Enter the max value: "))
+if n <= 0:
+	print("Please enter a positive integer")
+else:
+	series =  fibonacci_series(n)
+	print(f"Fibonacci series upto {n} :")
+	for i in range(n):
+		print(series[i],end=" ")
